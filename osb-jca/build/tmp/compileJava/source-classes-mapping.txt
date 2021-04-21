@@ -1,2 +1,0 @@
-oracle/tip/adapter/fw/jca/messageinflow/MessageEndpointImpl.java
- oracle.tip.adapter.fw.jca.messageinflow.MessageEndpointImpl

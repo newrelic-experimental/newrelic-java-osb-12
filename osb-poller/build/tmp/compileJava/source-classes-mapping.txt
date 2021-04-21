@@ -1,2 +1,0 @@
-com/bea/wli/sb/transports/poller/WorkPartitioningAgent.java
- com.bea.wli.sb.transports.poller.WorkPartitioningAgent

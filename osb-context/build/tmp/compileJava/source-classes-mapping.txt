@@ -1,8 +1,0 @@
-com/nr/instrumentation/context/InboundWrapper.java
- com.nr.instrumentation.context.InboundWrapper
-com/nr/instrumentation/context/OutboundWrapper.java
- com.nr.instrumentation.context.OutboundWrapper
-com/bea/wli/sb/services/dispatcher/callback/DispatchCallback.java
- com.bea.wli.sb.services.dispatcher.callback.DispatchCallback
-com/bea/wli/sb/context/PipelineDispatcherClient.java
- com.bea.wli.sb.context.PipelineDispatcherClient
