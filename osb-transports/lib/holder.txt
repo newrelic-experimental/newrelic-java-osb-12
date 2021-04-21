@@ -1,0 +1,12 @@
+Add these jars from your installation
+
+com.oracle.weblogic.security.jar
+com.oracle.weblogic.security.subject.jar
+main-transport.jar
+oracle.servicebus.configfwk.jar
+oracle.servicebus.kernel-api.jar
+oracle.servicebus.pipeline.api.jar
+oracle.servicebus.pipeline.kernel.jar
+oracle.servicebus.resources.service.jar
+oracle.servicebus.security.api.jar
+xbean.jar

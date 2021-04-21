@@ -1,0 +1,13 @@
+Add these jars from your installation
+
+From MQ installation
+com.ibm.mq.headers.jar
+com.ibm.mq.jar
+
+From OSB
+mq-connection.jar
+mq-transport.jar
+oracle.servicebus.configfwk.jar
+oracle.servicebus.kernel-api.jar
+oracle.servicebus.resources.service.jar
+oracle.servicebus.services.core.jar

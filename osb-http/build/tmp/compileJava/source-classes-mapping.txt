@@ -1,0 +1,6 @@
+com/nr/instrumentation/osb/http/HttpTransportServletBase_instrumentation.java
+ com.nr.instrumentation.osb.http.HttpTransportServletBase_instrumentation
+com/nr/instrumentation/osb/http/HttpTransportServlet_instrumentation.java
+ com.nr.instrumentation.osb.http.HttpTransportServlet_instrumentation
+com/nr/instrumentation/osb/http/HttpOutboundMessageContext_instrumentation.java
+ com.nr.instrumentation.osb.http.HttpOutboundMessageContext_instrumentation

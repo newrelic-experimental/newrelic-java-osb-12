@@ -8,3 +8,13 @@ git {
     }
 }
 rootProject.name = 'java-instrumentation-template'
+include 'osb-adapters'
+include 'osb-http'
+include 'osb-context'
+include 'osb-jca'
+include 'osb-jms'
+include 'osb-mdb'
+include 'osb-mq'
+include 'osb-pipeline'
+include 'osb-poller'
+include 'osb-transports'

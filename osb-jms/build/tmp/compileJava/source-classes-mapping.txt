@@ -1,0 +1,8 @@
+com/agent/instrumentation/oraclejms/InboundWrapper.java
+ com.agent.instrumentation.oraclejms.InboundWrapper
+oracle/sdpinternal/messaging/jms/LightweightJMSSender.java
+ oracle.sdpinternal.messaging.jms.LightweightJMSSender
+com/agent/instrumentation/oraclejms/OutboundWrapper.java
+ com.agent.instrumentation.oraclejms.OutboundWrapper
+oracle/sdpinternal/messaging/jms/LightweightJMSReceiver.java
+ oracle.sdpinternal.messaging.jms.LightweightJMSReceiver

@@ -1,0 +1,4 @@
+Add these jars from your installation
+
+jca-binding-api.jar
+jca-binding-osb.jar

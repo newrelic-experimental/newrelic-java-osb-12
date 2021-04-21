@@ -1,0 +1,22 @@
+com/nr/instrumentation/context/InboundWrapper.java
+ com.nr.instrumentation.context.InboundWrapper
+com/bea/wli/sb/pipeline/PipelineContextImpl.java
+ com.bea.wli.sb.pipeline.PipelineContextImpl
+com/bea/wli/sb/pipeline/RouterContext.java
+ com.bea.wli.sb.pipeline.RouterContext
+com/nr/instrumentation/osb/pipeline/dispatch/OutboundWrapper.java
+ com.nr.instrumentation.osb.pipeline.dispatch.OutboundWrapper
+com/nr/instrumentation/osb/pipeline/dispatch/InboundWrapper.java
+ com.nr.instrumentation.osb.pipeline.dispatch.InboundWrapper
+com/bea/wli/sb/pipeline/MessageProcessor.java
+ com.bea.wli.sb.pipeline.MessageProcessor
+com/bea/wli/sb/pipeline/components/RuntimeComponent.java
+ com.bea.wli.sb.pipeline.components.RuntimeComponent
+com/bea/wli/sb/pipeline/dispatcher/PipelineDispatcher.java
+ com.bea.wli.sb.pipeline.dispatcher.PipelineDispatcher
+com/nr/instrumentation/context/OutboundWrapper.java
+ com.nr.instrumentation.context.OutboundWrapper
+com/bea/wli/sb/services/dispatcher/callback/DispatchCallback.java
+ com.bea.wli.sb.services.dispatcher.callback.DispatchCallback
+com/bea/wli/sb/context/PipelineDispatcherClient.java
+ com.bea.wli.sb.context.PipelineDispatcherClient

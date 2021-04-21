@@ -1,0 +1,2 @@
+oracle/tip/adapter/sa/impl/fw/AdapterFrameworkListenerBase.java
+ oracle.tip.adapter.sa.impl.fw.AdapterFrameworkListenerBase

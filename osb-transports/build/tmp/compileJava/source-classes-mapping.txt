@@ -1,0 +1,22 @@
+com/nr/instrumentation/transports/InboundWrapper.java
+ com.nr.instrumentation.transports.InboundWrapper
+com/bea/wli/sb/transports/TransportProvider.java
+ com.bea.wli.sb.transports.TransportProvider
+com/bea/wli/sb/transports/http/generic/RequestHelperBase.java
+ com.bea.wli.sb.transports.http.generic.RequestHelperBase
+com/bea/wli/sb/transports/TransportDispatcherClient.java
+ com.bea.wli.sb.transports.TransportDispatcherClient
+com/nr/instrumentation/transports/InboundRequestWrapper.java
+ com.nr.instrumentation.transports.InboundRequestWrapper
+com/nr/instrumentation/transports/OutboundWrapper.java
+ com.nr.instrumentation.transports.OutboundWrapper
+com/nr/instrumentation/transports/NRUtils.java
+ com.nr.instrumentation.transports.NRUtils
+com/bea/wli/sb/transports/TransportSendListener.java
+ com.bea.wli.sb.transports.TransportSendListener
+com/bea/wli/sb/transports/http/generic/ResourceRequestProcessor.java
+ com.bea.wli.sb.transports.http.generic.ResourceRequestProcessor
+com/bea/wli/sb/transports/TransportManagerImpl.java
+ com.bea.wli.sb.transports.TransportManagerImpl
+com/nr/instrumentation/transports/InboundResponseWrapper.java
+ com.nr.instrumentation.transports.InboundResponseWrapper
