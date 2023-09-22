@@ -7,7 +7,7 @@ dependencies {
    implementation 'javax.servlet:servlet-api:2.5'
    implementation fileTree(include: ['*.jar'], dir: 'lib')
 
-   // New Relic Java Agent dependencies
+   // New Relic Labs Java Agent dependencies
    implementation 'com.newrelic.agent.java:newrelic-agent:6.0.0'
    implementation 'com.newrelic.agent.java:newrelic-api:6.0.0'
    implementation fileTree(include: ['*.jar'], dir: '../libs')
@@ -15,9 +15,9 @@ dependencies {
 
 jar {
   manifest {
-    attributes 'Implementation-Title': 'com.newrelic.instrumentation.osb-http'
-    attributes 'Implementation-Vendor': 'New Relic'
-    attributes 'Implementation-Vendor-Id': 'com.newrelic'
+    attributes 'Implementation-Title': 'com.newrelic.instrumentation.labs.osb-http'
+    attributes 'Implementation-Vendor': 'New Relic Labs'
+    attributes 'Implementation-Vendor-Id': 'com.newrelic.labs'
     attributes 'Implementation-Version': 1.0
   }
 }
