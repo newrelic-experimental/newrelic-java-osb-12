@@ -3,12 +3,12 @@ package com.bea.wli.sb.pipeline.components;
 import com.bea.wli.sb.context.MessageContext;
 import com.bea.wli.sb.pipeline.InternalPipelineContext;
 import com.bea.wli.sb.pipeline.PipelineException;
-import com.newrelic.api.agent.NewRelic;
 import com.newrelic.api.agent.Trace;
 import com.newrelic.api.agent.TransactionNamePriority;
 import com.newrelic.api.agent.weaver.MatchType;
 import com.newrelic.api.agent.weaver.Weave;
 import com.newrelic.api.agent.weaver.Weaver;
+import com.newrelic.api.agent.NewRelic;
 
 @Weave(type=MatchType.Interface)
 public abstract class RuntimeComponent {

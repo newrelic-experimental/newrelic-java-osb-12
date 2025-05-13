@@ -17,7 +17,7 @@ public abstract class RuntimeComponent {
 	
 	@Trace(dispatcher=true)
 	public boolean processMessage(MessageContext paramMessageContext, InternalPipelineContext paramInternalPipelineContext) throws PipelineException {
-		NewRelic.getAgent().getTracedMethod().setMetricName(new String[] {"Custom","OSB","RuntimeComponent",getName()});
+		NewRelic.getAgent().getTracedMethod().setMetricName(new String[] {"Custom","OSB","RuntimeComponent", getClass().getSimpleName(), getName()});
 		String pipelineName = paramInternalPipelineContext.getPipelineName();
 		if(pipelineName == null) {
 			pipelineName = "UnknownPipeline";

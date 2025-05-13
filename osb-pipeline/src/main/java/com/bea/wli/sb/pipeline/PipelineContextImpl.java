@@ -20,13 +20,13 @@ public abstract class PipelineContextImpl {
 	@Trace(dispatcher=true)
 	public boolean dispatch(MessageContext context, DispatchCallback callback, DispatchOptions options) {
 		
-		if(callback != null) {
-			if(callback.token == null) {
-				callback.token = NewRelic.getAgent().getTransaction().getToken();
-			} else {
-				callback.token.link();
-			}
-		}
+//		if(callback != null) {
+//			if(callback.token == null) {
+//				callback.token = NewRelic.getAgent().getTransaction().getToken();
+//			} else {
+//				callback.token.link();
+//			}
+//		}
 		String pipelineName = getPipelineName();
 		if(pipelineName != null) {
 			NewRelic.addCustomParameter("Pipeline", pipelineName);

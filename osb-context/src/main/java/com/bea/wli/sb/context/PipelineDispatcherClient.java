@@ -47,7 +47,10 @@ public abstract class PipelineDispatcherClient {
 
 		// Prefer _endpoint for URI
 		if(_endpoint != null && _endpoint.getTransportInfo() != null) {
-			uri = URI.create(_endpoint.getTransportInfo().getURI());
+			String tmp = _endpoint.getTransportInfo().getURI();
+			if(tmp != null && !tmp.isEmpty()) {
+				uri = URI.create(_endpoint.getTransportInfo().getURI());
+			}
 		}
 
 		// If URI not found in _endpoint, try inboundContext

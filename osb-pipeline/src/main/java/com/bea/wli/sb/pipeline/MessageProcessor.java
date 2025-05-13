@@ -16,27 +16,27 @@ public abstract class MessageProcessor {
 
 	@Trace(dispatcher=true)
 	public static void processRequest(RouterContext routerContext) {
-		Logger logger = NewRelic.getAgent().getLogger();
+//		Logger logger = NewRelic.getAgent().getLogger();
 
-		try {
+//		try {
 
-			DispatchContext dispatchCtx = routerContext.getInboundDispatchContext();
-
-			if(dispatchCtx != null) {
-				DispatchCallback callback = dispatchCtx.getCallback();
-				if(callback != null) {
-					if(callback.token == null) {
-						callback.token = NewRelic.getAgent().getTransaction().getToken();
-					}
-					callback.token.link();
-				}
-			}
+//			DispatchContext dispatchCtx = routerContext.getInboundDispatchContext();
+//
+//			if(dispatchCtx != null) {
+//				DispatchCallback callback = dispatchCtx.getCallback();
+//				if(callback != null) {
+//					if(callback.token == null) {
+//						callback.token = NewRelic.getAgent().getTransaction().getToken();
+//					}
+//					callback.token.link();
+//				}
+//			}
 
 			MessageContext messageCtx = routerContext.getMessageContext();
 			NewRelic.addCustomParameter("Message ID", messageCtx.getMessageId());
-		} catch (Exception e) {
-			logger.log(Level.FINE, e, "Error Message Context Inbound and Outbound Names");
-		}
+//		} catch (Exception e) {
+//			logger.log(Level.FINE, e, "Error Message Context Inbound and Outbound Names");
+//		}
 
 		Weaver.callOriginal();
 	}
