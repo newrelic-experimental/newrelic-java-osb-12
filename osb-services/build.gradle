@@ -9,7 +9,8 @@
        // implementation 'javax.servlet:servlet-api:2.5'
 
        // New Relic Java Agent dependencies
-       implementation fileTree(include: ['*.jar'], dir: '../libs')
+        implementation 'com.newrelic.agent.java:newrelic-agent:8.4.0'
+        implementation 'com.newrelic.agent.java:newrelic-api:8.4.0'
        implementation fileTree(include: ['*.jar'], dir: 'lib')
        implementation fileTree(include: ['*.jar'], dir: '../test-lib')
     }

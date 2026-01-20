@@ -23,12 +23,6 @@ public abstract class PipelineDispatcherClient {
 	public void dispatch(DispatchContext inboundContext, DispatchOptions options, DispatchCallback callback) {
 		URI uri = null;
 
-//		if(callback.token == null) {
-//			callback.token = NewRelic.getAgent().getTransaction().getToken();
-//		} else {
-//			callback.token.link();
-//		}
-
 		if(_endpoint != null) {
 			OutboundTransportInfo transportInfo = _endpoint.getTransportInfo();
 			String uriString = transportInfo.getURI();

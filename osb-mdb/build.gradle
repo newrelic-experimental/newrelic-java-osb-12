@@ -9,9 +9,8 @@ dependencies {
    implementation fileTree(include: ['*.jar'], dir: 'lib')
 
    // New Relic Labs Java Agent dependencies
-   implementation 'com.newrelic.agent.java:newrelic-agent:6.0.0'
-   implementation 'com.newrelic.agent.java:newrelic-api:6.0.0'
-   implementation fileTree(include: ['*.jar'], dir: '../libs')
+   implementation 'com.newrelic.agent.java:newrelic-agent:8.4.0'
+   implementation 'com.newrelic.agent.java:newrelic-api:8.4.0'
 }
 
 jar {

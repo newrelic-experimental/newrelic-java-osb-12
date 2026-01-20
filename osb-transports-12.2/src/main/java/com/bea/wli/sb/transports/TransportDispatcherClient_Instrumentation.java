@@ -27,6 +27,7 @@ public abstract class TransportDispatcherClient_Instrumentation {
 	
 	@Trace
 	public void dispatch(ProxyService service, InboundTransportMessageContext_Instrumentation ctx, TransportOptions options) {
+		
 		Weaver.callOriginal();
 	}
 	
@@ -75,14 +76,7 @@ public abstract class TransportDispatcherClient_Instrumentation {
 		DispatchCallback callback = Weaver.callOriginal();
 		if(CallbackAdapter_Instrumentation.class.isInstance(callback)) {
 			CallbackAdapter_Instrumentation adapter = (CallbackAdapter_Instrumentation)callback;
-			Segment segment = NewRelic.getAgent().getTransaction().startSegment("TransportDispatch");
-			if(params != null) {
-				NewRelic.getAgent().getLogger().log(Level.FINE,  "Using URI {0} and procedure {1} to report segment as external", ((GenericParameters)params).getUri(),  ((GenericParameters)params).getProcedure());
-				segment.reportAsExternal(params);
-			}
 			adapter.startTime = System.currentTimeMillis();
-			adapter.segment = segment;
-			NewRelic.getAgent().getLogger().log(Level.FINE, new Exception("call to TransportDispatcherClient.createDispatchCallback"), "Set startTime to {0} and segment to {1}", adapter.startTime, adapter.segment);
 		}
 		return callback;
 	}
@@ -95,9 +89,6 @@ public abstract class TransportDispatcherClient_Instrumentation {
 		@NewField
 		protected long startTime;
 		
-		@NewField
-		protected Segment segment = null;
-
 		private final ProxyService _service = Weaver.callOriginal();
 		
 		@SuppressWarnings("unused")
@@ -107,10 +98,6 @@ public abstract class TransportDispatcherClient_Instrumentation {
 		
 		@SuppressWarnings("unused")
 		public void handleFault(CallbackContext<FaultMessage> context) {
-			if(segment != null) {
-				segment.end();
-				segment = null;
-			}
 			FaultMessage faultMsg = context.getResponse();
 			if(faultMsg != null) {
 				NewRelic.noticeError("FaultMessage: Error Code: " + faultMsg.getErrorCode() + ", Error Message: " + faultMsg.getErrorMessage());
@@ -150,10 +137,6 @@ public abstract class TransportDispatcherClient_Instrumentation {
 
 		@Trace(async=true)
 		public void handleResponse(CallbackContext<ResponseMessage> context) {
-			if(segment != null) {
-				segment.end();
-				segment = null;
-			}
 			Weaver.callOriginal();
 			if(startTime > 0L) {
 				long endTime = System.currentTimeMillis();
