@@ -43,33 +43,33 @@ public abstract class DispatchCallback {
 			token = null;
 		}
 		Weaver.callOriginal();
-		try {
-			if(callbackContext != null) {
-				CallbackOptions options = callbackContext.getOptions();
-				URI uri = null;
-				if(options != null) {
-					uri = options.getURI();
-				}
-				ResponseMessage responseMsg = callbackContext.getResponse();
-				if(responseMsg != null) {
-					ResponseMetaData<?> response = responseMsg.getMetaData();
-					if (response != null) {
-						ResponseHeaders headers = response.getHeaders();
-						if (headers != null) {
-							InboundWrapper inboundHeaders = new InboundWrapper(headers);
-							ExternalParameters params = HttpParameters.library("OSB").uri(uri).procedure("handleResponse").inboundHeaders(inboundHeaders).build();
-							NewRelic.getAgent().getTracedMethod().reportAsExternal(params);
-						} else {
-							if(uri != null) {
-								ExternalParameters params = HttpParameters.library("OSB").uri(uri).procedure("handleResponse").noInboundHeaders().build();
-								NewRelic.getAgent().getTracedMethod().reportAsExternal(params);
-							}
-						}
-					}
-				}
-			}
-		} catch (DispatchException e) {
-			NewRelic.getAgent().getLogger().log(Level.FINER, e, "Unable to get Response Headers in {0}",new Object[] {getClass().getName()});
-		}
+//		try {
+//			if(callbackContext != null) {
+//				CallbackOptions options = callbackContext.getOptions();
+//				URI uri = null;
+//				if(options != null) {
+//					uri = options.getURI();
+//				}
+//				ResponseMessage responseMsg = callbackContext.getResponse();
+//				if(responseMsg != null) {
+//					ResponseMetaData<?> response = responseMsg.getMetaData();
+//					if (response != null) {
+//						ResponseHeaders headers = response.getHeaders();
+//						if (headers != null) {
+//							InboundWrapper inboundHeaders = new InboundWrapper(headers);
+//							ExternalParameters params = HttpParameters.library("OSB").uri(uri).procedure("handleResponse").inboundHeaders(inboundHeaders).build();
+//							NewRelic.getAgent().getTracedMethod().reportAsExternal(params);
+//						} else {
+//							if(uri != null) {
+//								ExternalParameters params = HttpParameters.library("OSB").uri(uri).procedure("handleResponse").noInboundHeaders().build();
+//								NewRelic.getAgent().getTracedMethod().reportAsExternal(params);
+//							}
+//						}
+//					}
+//				}
+//			}
+//		} catch (DispatchException e) {
+//			NewRelic.getAgent().getLogger().log(Level.FINER, e, "Unable to get Response Headers in {0}",new Object[] {getClass().getName()});
+//		}
 	}
 }

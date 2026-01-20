@@ -12,14 +12,14 @@ import com.nr.instrumentation.context.OutboundWrapper;
 @Weave
 public abstract class PipelineDispatcherClient {
 
-	@Trace(leaf=true)
+	@Trace
 	public void dispatch(DispatchContext inboundContext, DispatchOptions options, DispatchCallback callback) {
-		if(callback.token == null) {
-			callback.token = NewRelic.getAgent().getTransaction().getToken();
-		} else {
-			callback.token.link();
-		}
-		NewRelic.getAgent().getTracedMethod().addOutboundRequestHeaders(new OutboundWrapper(inboundContext.getRequest()));
+//		if(callback.token == null) {
+//			callback.token = NewRelic.getAgent().getTransaction().getToken();
+//		} else {
+//			callback.token.link();
+//		}
+//		NewRelic.getAgent().getTracedMethod().addOutboundRequestHeaders(new OutboundWrapper(inboundContext.getRequest()));
 		Weaver.callOriginal();
 	}
 }

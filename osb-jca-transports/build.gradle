@@ -1,0 +1,26 @@
+
+    // Build.gradle generated for instrumentation module osb-jca-transports
+
+    apply plugin: 'java'
+
+    dependencies {
+
+       // New Relic Java Agent dependencies
+        implementation 'com.newrelic.agent.java:newrelic-agent:8.5.0'
+        implementation 'com.newrelic.agent.java:newrelic-api:8.5.0'
+        implementation 'com.newrelic.agent.java:agent-bridge:8.6.0'
+        implementation fileTree(include: ['*.jar'], dir: 'lib')
+       implementation fileTree(include: ['*.jar'], dir: '../test-lib')
+    }
+
+    jar {
+      manifest {
+        attributes 'Implementation-Title': 'com.newrelic.instrumentation.labs.osb-jca-transports'
+        attributes 'Implementation-Vendor': 'New Relic Labs'
+        attributes 'Implementation-Vendor-Id': 'com.newrelic.labs'
+        attributes 'Implementation-Version': 1.0
+      }
+    }
+
+    verifyInstrumentation {
+    }

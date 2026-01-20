@@ -19,15 +19,9 @@ public abstract class PipelineDispatcherClient {
 
 	private final OutboundEndpoint _endpoint = Weaver.callOriginal();
 	
-	@Trace(leaf=true)
+	@Trace
 	public void dispatch(DispatchContext inboundContext, DispatchOptions options, DispatchCallback callback) {
 		URI uri = null;
-
-		if(callback.token == null) {
-			callback.token = NewRelic.getAgent().getTransaction().getToken();
-		} else {
-			callback.token.link();
-		}
 
 		if(_endpoint != null) {
 			OutboundTransportInfo transportInfo = _endpoint.getTransportInfo();

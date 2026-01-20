@@ -22,15 +22,15 @@ public abstract class PipelineDispatcher {
 
 	@Trace(dispatcher=true)
 	public void dispatch(DispatchContext context) {
-		DispatchCallback callback = context.getCallback();
-
-		if(callback != null) {
-			if(callback.token == null) {
-				callback.token = NewRelic.getAgent().getTransaction().getToken();
-			} else {
-				callback.token.link();
-			}
-		}
+//		DispatchCallback callback = context.getCallback();
+//
+//		if(callback != null) {
+//			if(callback.token == null) {
+//				callback.token = NewRelic.getAgent().getTransaction().getToken();
+//			} else {
+//				callback.token.link();
+//			}
+//		}
 
 		RequestMessage request = context.getRequest();
 		String msgId = request.getMessageID();

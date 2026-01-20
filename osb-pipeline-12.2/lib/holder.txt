@@ -1,0 +1,5 @@
+oracle.servicebus.configfwk.jar
+oracle.servicebus.kernel-api.jar
+oracle.servicebus.pipeline.api.jar
+oracle.servicebus.pipeline.kernel.jar
+oracle.servicebus.services.core.jar

@@ -16,13 +16,13 @@ public abstract class RouterContext {
 	
 	@Trace
 	public void init(DispatchContext inboundContext) {
-		DispatchCallback callBack = inboundContext.getCallback();
-		if(callBack != null) {
-			if(callBack.token == null) {
-				callBack.token = NewRelic.getAgent().getTransaction().getToken();
-			}
-			callBack.token.link();
-		}
+//		DispatchCallback callBack = inboundContext.getCallback();
+//		if(callBack != null) {
+//			if(callBack.token == null) {
+//				callBack.token = NewRelic.getAgent().getTransaction().getToken();
+//			}
+//			callBack.token.link();
+//		}
 		Weaver.callOriginal();
 	}
 }
